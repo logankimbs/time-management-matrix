@@ -1,12 +1,12 @@
 # Time Management Matrix
 
-In the book “The 7 Habits of Highly Effective People”, Steven Covey talks about the habit of “Putting First Things First”, and suggests that Tasks on the To Do list be broken out into four Quadrants. <br/>
+In the book “The 7 Habits of Highly Effective People”, Steven Covey talks about the habit of “Putting First Things First”, and suggests that Tasks on the To Do list be broken out into four Quadrants.
 <ul>
  <li>Quadrant I: Important / Urgent</li>
  <li>Quadrant II: Important / Not Urgent</li>
  <li>Quadrant III: Not Important / Urgent</li>
  <li>Quadrant IV: Not Important / Not Urgent</li>
- </ul>
+</ul>
 Build an app that allow the users to enter tasks with the following information:
 • Task (Required)
 • Due Date
