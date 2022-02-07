@@ -1,13 +1,17 @@
 # Time Management Matrix
 
-In the book “The 7 Habits of Highly Effective People”, Steven Covey talks about the habit of “Putting First Things First”, and suggests that Tasks on the To Do list be broken out into four Quadrants.
+In the book “The 7 Habits of Highly Effective People”, Steven Covey talks about the habit of “Putting First Things First”, and suggests that Tasks on the To Do list be broken out into four Quadrants. <br/>
+
 <ul>
  <li>Quadrant I: Important / Urgent</li>
  <li>Quadrant II: Important / Not Urgent</li>
  <li>Quadrant III: Not Important / Urgent</li>
  <li>Quadrant IV: Not Important / Not Urgent</li>
 </ul>
-Build an app that allow the users to enter tasks with the following information:
+
+
+Build an app that allow the users to enter tasks with the following information: <br/>
+
 <ul>
  <li>Task (Required)</li>
  <li>Due Date</li>
@@ -15,7 +19,10 @@ Build an app that allow the users to enter tasks with the following information:
  <li>Category (Dropdown containing options: Home, School, Work)</li>
  <li>Completed (True/False)</li>
 </ul>
+
+
 Build a View that lists out all the tasks, laid out on the screen in Quadrants. Allow the user to Update and Delete the tasks and also to mark as Completed. Only display tasks that have not been completed. Create a navigation menu to navigate between each view. <br/>
+
 Assign each member of your team one of four responsibilities, which I have attempted to divide up as evenly as possible:
 <ol>
  <li>Models / Database / Setup: This individual will build the models and set up the database. They will populate the database with any needed info. They will also configure all the needed settings/services/endpoints in the Startup.cs file.</li>
