@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using time_management_matrix.Models;
 
-namespace MovieCollection.Models
+namespace time_management_matrix.Models
 {
     public class TaskFormContext : DbContext
     {
@@ -36,6 +36,6 @@ namespace MovieCollection.Models
                 }
 
              );
-        }
     }
+}
 }
