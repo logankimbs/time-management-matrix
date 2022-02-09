@@ -29,7 +29,7 @@ namespace MovieCollection.Models
                     TaskID = 1,
                     CategoryId = 1,
                     Task = "Mission 6",
-                    DueDate = 01 - 09 - 2021,
+                    DueDate = new DateTime(2022, 01, 09),
                     Quadrant = 1,
 
                     Completed = false
