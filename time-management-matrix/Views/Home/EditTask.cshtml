@@ -1,8 +1,8 @@
 @{
-    ViewData["Title"] = "Task";
+    ViewData["Title"] = "Edit Task";
 }
 
-@model time_management_matrix.Models.TaskForm
+@model time_management_matrix.Models.TaskForm;
 
 <h1>Task</h1>
 <div>
@@ -11,8 +11,10 @@
 
         <label asp-for="Task">Task: </label>
         <input asp-for="Task" /><br />
+
         <label asp-for="DueDate">Due Date: </label>
         <input asp-for="DueDate" /><br />
+
         <label asp-for="Quadrant">Quadrant: </label>
         <input asp-for="Quadrant" /><br />
 
@@ -21,7 +23,7 @@
             <option value="">Select a Category</option>
             @foreach (Category m in ViewBag.Categories)
             {
-            <option value='@m.CategoryId'>@m.CategoryName</option>
+                <option value='@m.CategoryId'>@m.CategoryName</option>
             }
         </select>
         <br />
