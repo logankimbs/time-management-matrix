@@ -18,20 +18,24 @@ namespace time_management_matrix.Controllers
         {
             FormContext = someName;
         }
+
         public IActionResult Index()
         {
             return View();
         }
 
         [HttpGet]
-        public IActionResult TaskForm()
+        public IActionResult Tasks()
         {
-            ViewBag.Categories = FormContext.Categories.ToList();
-            return View();
+            var applications = FormContext.Responses.Include(x => x.Category)
+                .OrderBy(x => x.Category)
+                .ToList();
+
+            return View(applications);
         }
 
         [HttpPost]
-        public IActionResult TaskForm(TaskForm ar)
+        public IActionResult Tasks(TaskForm ar)
         {
             if (ModelState.IsValid)
             {
@@ -39,13 +43,13 @@ namespace time_management_matrix.Controllers
                 FormContext.SaveChanges();
                 return View();
             }
-
             else
             {
                 ViewBag.Categories = FormContext.Categories.ToList();
                 return View();
             }
         }
+
         public IActionResult CreateTask()
         {
             return View();
