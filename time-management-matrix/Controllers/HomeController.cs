@@ -46,6 +46,10 @@ namespace time_management_matrix.Controllers
                 return View();
             }
         }
+        public IActionResult Quadrants()
+        {
+            return View();
+        }
         public IActionResult CreateTask()
         {
             return View();
