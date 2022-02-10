@@ -14,9 +14,9 @@ namespace time_management_matrix.Controllers
     {
         private TaskFormContext FormContext { get; set; }
 
-        public HomeController(TaskFormContext someName)
+        public HomeController(TaskFormContext context)
         {
-            FormContext = someName;
+            FormContext = context;
         }
 
         public IActionResult Index()
@@ -27,11 +27,11 @@ namespace time_management_matrix.Controllers
         [HttpGet]
         public IActionResult Tasks()
         {
-            var applications = FormContext.Responses.Include(x => x.Category)
+            var tasks = FormContext.Responses.Include(x => x.Category)
                 .OrderBy(x => x.Category)
                 .ToList();
 
-            return View(applications);
+            return View(tasks);
         }
 
         [HttpPost]
@@ -56,9 +56,12 @@ namespace time_management_matrix.Controllers
         }
 
         [HttpGet]
-        public IActionResult EditTask()
+        public IActionResult EditTask(int id)
         {
-            return View();
+            ViewBag.Categories = FormContext.Categories.ToList();
+            var task = FormContext.Responses.Single(task => task.TaskID == id);
+
+            return View("Tasks", task);
         }
 
         [HttpGet]

@@ -9,7 +9,7 @@ using time_management_matrix.Models;
 namespace time_management_matrix.Migrations
 {
     [DbContext(typeof(TaskFormContext))]
-    [Migration("20220210031048_Initial")]
+    [Migration("20220210034702_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

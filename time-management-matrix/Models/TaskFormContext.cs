@@ -22,6 +22,7 @@ namespace time_management_matrix.Models
                 new Category { CategoryId = 3, CategoryName = "Work" },
                 new Category { CategoryId = 4, CategoryName = "Church" }
             );
+
             mb.Entity<TaskForm>().HasData(
                 new TaskForm
                 {
@@ -32,7 +33,7 @@ namespace time_management_matrix.Models
                     Quadrant = 1,
                     Completed = false
                 }
-                );
+            );
         }
     }
 }
