@@ -50,6 +50,12 @@ namespace time_management_matrix.Controllers
             }
         }
 
+        public IActionResult Quadrants()
+        {
+            return View();
+        }
+
+        //HEAD =======>>>>>>> 70b4e17a25522dcf3bd489cf35758f3a52ff0955
         public IActionResult CreateTask()
         {
             return View();
@@ -64,10 +70,32 @@ namespace time_management_matrix.Controllers
             return View("Tasks", task);
         }
 
-        [HttpGet]
-        public IActionResult DeleteTask()
+        [HttpPost]
+        public IActionResult Edit(TaskForm blah)
         {
-            return View();
+            FormContext.Update(blah);
+            FormContext.SaveChanges();
+
+            return RedirectToAction("Tasks");
         }
+
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            var task = FormContext.Responses.Single(task => task.TaskID == id);
+
+            return View(task);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(TaskForm tf)
+        {
+            FormContext.Responses.Remove(tf);
+            FormContext.SaveChanges();
+
+            return RedirectToAction("Tasks");
+        }
+
+
     }
 }
